@@ -1,0 +1,22 @@
+Oskari Tärkeimmät opit:
+Fetch ja sen käyttäminen (VIHDOIN : DDD)
+
+trains.js cStation // hakee asemadataa sekä suodattaa liikennöintipaikat pois jos niissä ei ole matkustajaliikennettä
+
+
+function cStation(){
+    fetch(`https://rata.digitraffic.fi/api/v1/metadata/stations`)
+    .then(res => res.json())
+    .then(data => {
+        console.dir(data);
+        let tempstring = "";
+        for (let d of data) {
+            if (d.passengerTraffic == true){
+            tempstring += `<option value="${d.stationName}">${d.stationShortCode}`;
+            console.dir(d);
+        }}
+        chooseStation.innerHTML=tempstring;
+    }).catch((error)=>{
+        console.error('Error:', error);
+    })
+}
