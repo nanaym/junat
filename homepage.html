@@ -1,21 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
   <link href="trains.css" rel="stylesheet">
 </head>
-<body>
-    <h4>Lähtö</h4>
-    <input type="text" id="searchdepart" onclick="myFunction()" placeholder="Syötä asema">
-    <button type="submit" id="btndepart">Hae</button>
 
-    <h4>Määränpää</h4>
-    <input type="text" id="searcharrive" onclick="myFunction2()" placeholder="Syötä asema">
-    <button type="submit" id="btnarrive">Hae</button>
+<body onload="cStation()">
+  <h4>Lähtö</h4>
+  <input list="chooseStation" type="text" id="searchdepart" onclick="myFunction()" placeholder="Syötä asema">
+  <datalist id="chooseStation">
+
+  </datalist>
+  <button type="submit" id="btndepart">Hae</button>
+
+  <h4>Määränpää</h4>
+  <input list="chooseStation" type="text" id="searcharrive" onclick="myFunction2()" placeholder="Syötä asema">
+  <button type="submit" id="btnarrive">Hae</button>
+
+  <br></br>
+
+
+
+  <div id="trainSchedule"></div>
+
+
   <script src="trains.js"></script>
-   
+
+
 </body>
+
 </html>
