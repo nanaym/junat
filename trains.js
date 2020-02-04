@@ -2,7 +2,7 @@
 //document.getElementById("searchdepart").addEventListener("click",)
 
 function myFunction(){
-    fetch(`https://rata.digitraffic.fi/api/v1/live-trains/station/HKI/TPE`)
+    fetch("https://rata.digitraffic.fi/api/v1/live-trains/station/HKI/TPE")
     .then(res => res.json())
     .then(data => {
         console.dir(data);
