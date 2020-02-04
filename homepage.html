@@ -8,14 +8,19 @@
   <link href="trains.css" rel="stylesheet">
 </head>
 <body>
-    <h4>Lähtö</h4>
-    <input type="text" id="searchdepart" onclick="myFunction()" placeholder="Syötä asema">
-    <button type="submit" id="btndepart">Hae</button>
+    <h4>Lähtö</h4>    
+    <input type="text" id="searchdepart"  placeholder="Syötä asema">
+    <button onclick="myFunction()" type="submit" id="btndepart">Hae</button>
 
     <h4>Määränpää</h4>
-    <input type="text" id="searcharrive" onclick="myFunction2()" placeholder="Syötä asema">
-    <button type="submit" id="btnarrive">Hae</button>
+    <input type="text" id="searcharrive" placeholder="Syötä asema">
+    <button onclick="myFunction2()" type="submit" id="btnarrive">Hae</button>
+    
+    <div id="trainSchedule">
+
+    </div>
   <script src="trains.js"></script>
-   
+
+
 </body>
 </html>
