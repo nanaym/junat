@@ -25,7 +25,7 @@ form {
 #trainSchedule {
     display: grid;
     grid-gap: 5px;
-    grid-template-columns: repeat(4, 175px);
+    grid-template-columns: repeat(5, 175px);
     justify-content: center;
     align-items: stretch;
     align-content: center;
@@ -44,4 +44,8 @@ p #c {
 p #d {
     grid-column: 5/6;
 }
+p #e {
+    grid-column: 6/7;
+}
+
 
