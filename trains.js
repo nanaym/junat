@@ -28,14 +28,16 @@ function myFunction() {
             let tempstring = "";
             // Allaoleva käy läpi vastaanotettua dataa ja suodattaa halutut tiedot (junatyyppi, raide, lähtö- ja saapumisaika)
             for (let d of data) {
-                
-                let t = new Date(d.timeTableRows[0].scheduledTime);
-                let departTime = t.toLocaleTimeString("fi", options);
+
+                let tdeparttime = getDepartureTime(d.timeTableRows, departure);
+                let tDepart = new Date(tdeparttime);
+                let departTime = tDepart.toLocaleTimeString("fi", options);
 
                // let saapuminen = d.timeTableRows.stationShortCode.indexOf(`'${arrival}'`);
                 //console.log(saapuminen);
-
-                let tArrive = new Date(d.timeTableRows[d.timeTableRows.length - 1].scheduledTime);
+                let tArriveTime=getArrivingTime(d.timeTableRows, arrival);
+                // let tArrive = new Date(d.timeTableRows[d.timeTableRows.length - 1].scheduledTime);
+                let tArrive = new Date(tArriveTime);
                 let arriveTime = tArrive.toLocaleTimeString("fi", options);
                 let train;
                 if (d.commuterLineID.length > 0) {
@@ -43,10 +45,24 @@ function myFunction() {
                 } else {
                     train = d.trainType + d.trainNumber
                 };
-                tempstring += `<p id="a">Juna ${train}</p> <p id="b">Raide ${d.timeTableRows[0].commercialTrack}</p> <p id="c">Lähtö: ${departTime}</p> <p id="d"> Saapuminen: ${arriveTime}</p> <p id="e"> Matka-aika: ${arriveTime-departTime}</p>`;
+                tempstring += `<p id="a">Juna ${train}</p> <p id="b">Raide ${departureStation.commercialTrack}</p> 
+                <p id="c">Lähtö: ${departTime}</p> <p id="d"> Saapuminen: ${arriveTime}</p> 
+                <p id="e"> Matka-aika: ${arriveTime-departTime}</p>`;
             }
             trainSchedule.innerHTML = tempstring;
         }).catch((error) => {
             console.error('Error:', error);
         })
+}
+function getArrivingTime(timeTableRows, stationShortCode){
+    console.dir(arguments);
+    destinationStation=timeTableRows.find(tr=>tr.stationShortCode==stationShortCode)
+    console.dir(destinationStation);
+    return destinationStation.scheduledTime;
+}
+function getDepartureTime(timeTableRows, stationShortCode){
+    console.dir(arguments);
+    departureStation=timeTableRows.find(tr=>tr.stationShortCode==stationShortCode)
+    console.dir(departureStation);
+    return departureStation.scheduledTime;
 }
