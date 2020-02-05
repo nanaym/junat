@@ -3,8 +3,6 @@
 }
 
 body {
-    display: grid;
-    grid-gap: 5px;
     margin: auto;
 
     justify-content: center;
@@ -23,3 +21,27 @@ body {
 form {
     width: 600px;
 }
+
+#trainSchedule {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(4, 175px);
+    justify-content: center;
+    align-items: stretch;
+    align-content: center;
+    text-align: center;
+}
+
+p #a {
+    grid-column: 2/3;
+}
+p #b {
+    grid-column: 3/4;
+}
+p #c {
+    grid-column: 4/5;
+}
+p #d {
+    grid-column: 5/6;
+}
+

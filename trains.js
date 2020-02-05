@@ -42,7 +42,7 @@ function myFunction() {
                 } else {
                     juna = d.trainType + d.trainNumber
                 };
-                tempstring += `<div>Juna ${juna}, raide ${d.timeTableRows[0].commercialTrack}, lähtöaika ${lahtoaika}</div>, saapumisaika ${saapumisaika}`;
+                tempstring += `<p id="a">Juna ${juna}</p> <p id="b">Raide ${d.timeTableRows[0].commercialTrack}</p> <p id="c">Lähtö: ${lahtoaika}</p> <p id="d"> Saapuminen: ${saapumisaika}</p>`;
                 console.dir(d);
             }
             trainSchedule.innerHTML = tempstring;
