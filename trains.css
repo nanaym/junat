@@ -1,5 +1,5 @@
 * {
-    box-sizing: borderb;
+    box-sizing: border-box;
 }
 
 body {
@@ -20,3 +20,6 @@ body {
     background-color: rgba(107, 173, 218, 0.3);
 }
 
+form {
+    width: 600px;
+}
