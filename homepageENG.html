@@ -24,6 +24,7 @@
     <input id="userName" type="text" placeholder="Enter username" value=""/>
     <input id="userPw" type="password" placeholder="Enter password" value=""/>
     <button id="loginbtn" type="button" onClick="check()">Sign in</button>
+    <button id="logoutbtn" type="button" onClick="logOut()">Log out</button>
     
 
 </form>
@@ -35,7 +36,6 @@
 <a href="https://shop.vr.fi/onlineshop/Welcome.do?request_locale=en" target="_blank">VR tickets</a>
 <a href="https://www.hsl.fi/en/tickets" target="_blank">HSL tickets</a>
 
-<script src="loginEN.js"></script>
 
   <h4>Departure</h4>
   <input list="chooseStation" type="text" id="searchdepart" placeholder="Enter station">
@@ -63,6 +63,7 @@
 
 
   <script src="trains.js"></script>
+  <script src="loginEN.js" onload="checkIfLogged()"></script>
 
 
 </body>

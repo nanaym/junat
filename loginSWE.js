@@ -38,3 +38,17 @@ function activeUser() {
     let currentUser = localStorage.getItem('currentUser', userName.value);
 currentUsername.innerHTML = `<p> Inloggad: ${currentUser}</p>`
 }
+function logOut(){
+    localStorage.removeItem('currentUser');
+    document.getElementById("currentUsername").remove();
+    alert('Loggad ut')
+}
+function checkIfLogged(){
+    let checkIfLog = localStorage.getItem('currentUser', userName.value);
+    console.log(checkIfLog)
+    if (checkIfLog == null){
+        console.log('no user logged in');
+    } else {
+        activeUser();
+    }
+}

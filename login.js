@@ -40,3 +40,17 @@ console.log('toimii');
 console.log(currentUser);
 currentUsername.innerHTML = `<p> Sisäänkirjautunut: ${currentUser}</p>`
 }
+function logOut(){
+    localStorage.removeItem('currentUser');
+    document.getElementById("currentUsername").remove();
+    alert('Olet nyt kirjautunut ulos.')
+}
+function checkIfLogged(){
+    let checkIfLog = localStorage.getItem('currentUser', userName.value);
+    console.log(checkIfLog)
+    if (checkIfLog == null){
+        console.log('no user logged in');
+    } else {
+        activeUser();
+    }
+}
