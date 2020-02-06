@@ -9,6 +9,10 @@
   <link href="trains.css" rel="stylesheet">
 </head>
 <body onload="cStation()">
+  
+  <a id="flag" href="homepageENG.html"><img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Flag_of_Great_Britain_%281707%E2%80%931800%29.svg" height="20"/></a>
+
+  <p>Päivämäärä/Aika: <span id="datetime"></span></p>
 
   <form id="register-form"> 
     <input id="username" type="text" placeholder="Valitse nimi" value=""/>
@@ -34,11 +38,17 @@
   <h4>Määränpää</h4>
   <input list="chooseStation" type="text" id="searcharrive" placeholder="Syötä asema">
   <button type="button" id="btndepart" onclick="myFunction()">Hae</button>
+<br><br>
 
-
-  <br></br>
-
-
+  <div>
+    <tr>
+      <td>Juna</td>
+      <td>Raide</td>
+      <td>Lähtö</td>
+      <td>Saapuminen</td>
+      <td>Matka-aika</td>
+    </tr>
+  </div>
 
   <div id="trainSchedule"></div>
 
