@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link href="trains.css" rel="stylesheet">
+</head>
+<body onload="cStation()">
+    <a id="flag" href="homepage.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_Finland.svg/383px-Flag_of_Finland.svg.png" height="20"/></a>
+
+    <p>Date/Time: <span id="datetime"></span></p>
+    
+  <form id="register-form"> 
+    <input id="username" type="text" placeholder="Create username" value=""/>
+    <input id="pw" type="password" placeholder="Create password" value=""/>
+    <input id="rgstrbtn" type="submit" value="Sign up" onClick="store()"/> 
+</form>
+
+<form id="login-form"> 
+    <input id="userName" type="text" placeholder="Enter username" value=""/>
+    <input id="userPw" type="password" placeholder="Enter password" value=""/>
+    <input id="loginbtn" type="submit" value="Sign in" onClick="check()"/> 
+</form>
+<div id="currentUsername"></div>
+
+<script src="login.js"></script>
+
+  <h4>Departure</h4>
+  <input list="chooseStation" type="text" id="searchdepart" placeholder="Enter station">
+  <datalist id="chooseStation">
+
+  </datalist>
+
+  <h4>Destination</h4>
+  <input list="chooseStation" type="text" id="searcharrive" placeholder="Enter station">
+  <button type="button" id="btndepart" onclick="myFunction()">Search</button>
+  <br><br>
+
+  <div>
+    <tr>
+      <td>Train</td>
+      <td>Rail</td>
+      <td>Departure</td>
+      <td>Arrival</td>
+      <td>Travel time</td>
+    </tr>
+  </div>
+
+
+  <div id="trainSchedule"></div>
+
+
+  <script src="trains.js"></script>
+
+
+</body>
+
+</html>
