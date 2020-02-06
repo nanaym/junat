@@ -24,40 +24,40 @@
 <form id="login-form"> 
     <input id="userName" type="text" placeholder="Ange ditt användarnamn" value=""/>
     <input id="userPw" type="password" placeholder="Ange ditt lösenord" value=""/>
-    <input id="loginbtn" type="submit" value="Logga in" onClick="check()"/> 
+    <button id="loginbtn" type="button" onClick="check()">Logga in</button> 
+    <button id="logoutbtn" type="button" onClick="logOut()">Logga ut</button>
 </form>
 <div id="currentUsername"></div>
 
 <a href="https://shop.vr.fi/onlineshop/Welcome.do?request_locale=fi" target="_blank">VR biljetter</a>
 <a href="https://www.hsl.fi/liput" target="_blank">HSL biljetter</a>
 
-<script src="login.js"></script>
 
   <h4>Avgång</h4>
-  <input list="chooseStation" type="text" id="searchdepart" placeholder="Ge det en tågstationen">
+  <input list="chooseStation" type="text" id="searchdepart" placeholder="Tågstationen">
   <datalist id="chooseStation">
 
   </datalist>
 
   <h4>Destination</h4>
-  <input list="chooseStation" type="text" id="searcharrive" placeholder="Ge det en tågstationen">
+  <input list="chooseStation" type="text" id="searcharrive" placeholder="Tågstationen">
   <button type="button" id="btndepart" onclick="myFunction()">Sök</button>
 <br><br>
 
   <div>
     <tr>
       <td>Tåg</td>
-      <td>Spåra</td>
+      <td>Spår</td>
       <td>Avgång</td>
       <td>Ankomst</td>
-      <td>Restid</td>
+      <td>Resetid</td>
     </tr>
   </div>
 
   <div id="trainSchedule"></div>
 
-
   <script src="trains.js"></script>
+  <script src="loginSWE.js" onload="checkIfLogged()"></script>
 
 
 </body>

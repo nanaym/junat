@@ -9,9 +9,10 @@
   <link href="trains.css" rel="stylesheet">
 </head>
 <body onload="cStation()">
+
   
   <a id="flag" href="homepageENG.html"><img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Flag_of_Great_Britain_%281707%E2%80%931800%29.svg" height="20"/></a>
-  <a id="flag" href="homepageSWE.html"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/4c/Flag_of_Sweden.svg/383px-Flag_of_Sweden.svg.png" height="20"/></a>
+  <a id="flag" href="homepageSWE.html" onClick="activeUser()"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/4c/Flag_of_Sweden.svg/383px-Flag_of_Sweden.svg.png" height="20"/></a>
 
   <p>Päivämäärä/Aika: <span id="datetime"></span></p>
 
@@ -24,14 +25,13 @@
 <form id="login-form"> 
     <input id="userName" type="text" placeholder="Syötä käyttäjätunnus" value=""/>
     <input id="userPw" type="password" placeholder="Syötä salasana" value=""/>
-    <input id="loginbtn" type="submit" value="Kirjaudu" onClick="check()"/> 
+    <button id="loginbtn" type="button" onClick="check()">Kirjaudu</button>
+    <button id="logoutbtn" type="button" onClick="logOut()">Kirjaudu ulos</button>
 </form>
 <div id="currentUsername"></div>
-
 <a href="https://shop.vr.fi/onlineshop/Welcome.do?request_locale=fi" target="_blank">VR liput</a>
 <a href="https://www.hsl.fi/liput" target="_blank">HSL liput</a>
 
-<script src="login.js"></script>
 
   <h4>Lähtö</h4>
   <input list="chooseStation" type="text" id="searchdepart" placeholder="Syötä asema">
@@ -55,9 +55,10 @@
   </div>
 
   <div id="trainSchedule"></div>
-
-
   <script src="trains.js"></script>
+  <script src="login.js" onload="checkIfLogged()"></script>
+
+
 
 
 </body>
