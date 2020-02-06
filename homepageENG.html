@@ -21,14 +21,14 @@
   <form id="register-form"> 
     <input id="username" type="text" placeholder="Create username" value=""/>
     <input id="pw" type="password" placeholder="Create password" value=""/>
-    <input id="rgstrbtn" type="submit" value="Sign up" onClick="store()"/>
+    <input class="button" id="rgstrbtn" type="submit" value="Sign up" onClick="store()"/>
 </form>
 
 <form id="login-form"> 
     <input id="userName" type="text" placeholder="Enter username" value=""/>
     <input id="userPw" type="password" placeholder="Enter password" value=""/>
-    <button id="loginbtn" type="button" onClick="check()">Sign in</button>
-    <button id="logoutbtn" type="button" onClick="logOut()">Log out</button>
+    <button class="button" id="loginbtn" type="button" onClick="check()">Sign in</button>
+    <button class="button" id="logoutbtn" type="button" onClick="logOut()">Log out</button>
     
 
 </form>
@@ -49,7 +49,7 @@
 
   <h4>Destination</h4>
   <input list="chooseStation" type="text" id="searcharrive" placeholder="Enter station">
-  <button type="button" id="btndepart" onclick="myFunction()">Search</button>
+  <button class="button" type="button" id="btndepart" onclick="myFunction()">Search</button>
   <br><br>
 
   <div class="trainSchedule" id="tableHeader">
@@ -67,7 +67,7 @@
 
   <script src="trains.js"></script>
   <script src="loginEN.js" onload="checkIfLogged()"></script>
-
+  <p><em>Developed by : Nana, Oskari and Henri</em></p>
 
 </body>
 

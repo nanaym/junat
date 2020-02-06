@@ -21,14 +21,14 @@
   <form id="register-form"> 
     <input id="username" type="text" placeholder="Välj ett namn" value=""/>
     <input id="pw" type="password" placeholder="Välj ett lösenord" value=""/>
-    <input id="rgstrbtn" type="submit" value="Skapa ett konto" onClick="store()"/> 
+    <input class="button" id="rgstrbtn" type="submit" value="Skapa ett konto" onClick="store()"/> 
 </form>
 
 <form id="login-form"> 
     <input id="userName" type="text" placeholder="Ange ditt användarnamn" value=""/>
     <input id="userPw" type="password" placeholder="Ange ditt lösenord" value=""/>
-    <button id="loginbtn" type="button" onClick="check()">Logga in</button> 
-    <button id="logoutbtn" type="button" onClick="logOut()">Logga ut</button>
+    <button class="button" id="loginbtn" type="button" onClick="check()">Logga in</button> 
+    <button class="button" id="logoutbtn" type="button" onClick="logOut()">Logga ut</button>
 </form>
 <div id="currentUsername"></div>
 
@@ -44,7 +44,7 @@
 
   <h4>Destination</h4>
   <input list="chooseStation" type="text" id="searcharrive" placeholder="Tågstationen">
-  <button type="button" id="btndepart" onclick="myFunction()">Sök</button>
+  <button class="button" type="button" id="btndepart" onclick="myFunction()">Sök</button>
 <br><br>
 
 <div class="trainSchedule" id="tableHeader">
@@ -61,7 +61,7 @@
   <script src="trains.js"></script>
   <script src="loginSWE.js" onload="checkIfLogged()"></script>
 
-
+  <p><em>Developed by : Nana, Oskari and Henri</em></p>
 </body>
 
 </html>
