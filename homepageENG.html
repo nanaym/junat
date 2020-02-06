@@ -9,6 +9,8 @@
   <link href="trains.css" rel="stylesheet">
 </head>
 <body onload="cStation()">
+  <header id="header">
+    
     <a id="flag" href="homepage.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_Finland.svg/383px-Flag_of_Finland.svg.png" height="20"/></a>
     <a id="flag" href="homepageSWE.html"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/4c/Flag_of_Sweden.svg/383px-Flag_of_Sweden.svg.png" height="20"/></a>
 
@@ -36,6 +38,11 @@
 <a href="https://shop.vr.fi/onlineshop/Welcome.do?request_locale=en" target="_blank">VR tickets</a>
 <a href="https://www.hsl.fi/en/tickets" target="_blank">HSL tickets</a>
 
+<a href="https://shop.vr.fi/onlineshop/Welcome.do?request_locale=en" target="_blank">VR tickets</a>
+<a href="https://www.hsl.fi/en/tickets" target="_blank">HSL tickets</a>
+
+<script src="login.js"></script>
+
 
   <h4>Departure</h4>
   <input list="chooseStation" type="text" id="searchdepart" placeholder="Enter station">
@@ -48,18 +55,17 @@
   <button type="button" id="btndepart" onclick="myFunction()">Search</button>
   <br><br>
 
-  <div>
-    <tr>
-      <td>Train</td>
-      <td>Rail</td>
-      <td>Departure</td>
-      <td>Arrival</td>
-      <td>Travel time</td>
-    </tr>
+  <div class="trainSchedule" id="tableHeader">
+      <p id="a">Train</p>
+      <p id="b">Rail</p>
+      <p id="c">Departure</p>
+      <p id="d">Arrival</p>
+      <p id="e">Duration</p>
   </div>
+</header>
 
-
-  <div id="trainSchedule"></div>
+  <div class="trainSchedule" id="trainSchedule">
+  </div>
 
 
   <script src="trains.js"></script>
