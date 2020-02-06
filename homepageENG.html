@@ -10,22 +10,28 @@
 </head>
 <body onload="cStation()">
     <a id="flag" href="homepage.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_Finland.svg/383px-Flag_of_Finland.svg.png" height="20"/></a>
+    <a id="flag" href="homepageSWE.html"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/4c/Flag_of_Sweden.svg/383px-Flag_of_Sweden.svg.png" height="20"/></a>
 
     <p>Date/Time: <span id="datetime"></span></p>
     
   <form id="register-form"> 
     <input id="username" type="text" placeholder="Create username" value=""/>
     <input id="pw" type="password" placeholder="Create password" value=""/>
-    <input id="rgstrbtn" type="submit" value="Sign up" onClick="store()"/> 
+    <input id="rgstrbtn" type="submit" value="Sign up" onClick="store()"/>
 </form>
 
 <form id="login-form"> 
     <input id="userName" type="text" placeholder="Enter username" value=""/>
     <input id="userPw" type="password" placeholder="Enter password" value=""/>
-    <input id="loginbtn" type="submit" value="Sign in" onClick="check()"/> 
+    <button id="loginbtn" type="button" onClick="check()">Sign in</button>
+    
+
 </form>
 
 <div id="currentUsername"></div>
+<a href="https://shop.vr.fi/onlineshop/Welcome.do?request_locale=en" target="_blank">VR tickets</a>
+<a href="https://www.hsl.fi/en/tickets" target="_blank">HSL tickets</a>
+
 <a href="https://shop.vr.fi/onlineshop/Welcome.do?request_locale=en" target="_blank">VR tickets</a>
 <a href="https://www.hsl.fi/en/tickets" target="_blank">HSL tickets</a>
 

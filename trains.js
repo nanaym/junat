@@ -52,9 +52,9 @@ function myFunction() {
                 } else {
                     train = d.trainType + d.trainNumber
                 };
-                tempstring += `<p id="a">Juna ${train}</p> <p id="b">Raide ${departureStation.commercialTrack}</p> 
-                <p id="c">Lähtö: ${departTime}</p> <p id="d"> Saapuminen: ${arriveTime}</p> 
-                <p id="e"> Matka-aika: ${travelTime()}</p>`;
+                tempstring += `<p id="a">${train}</p> <p id="b">${departureStation.commercialTrack}</p> 
+                <p id="c">${departTime}</p> <p id="d">${arriveTime}</p> 
+                <p id="e">${travelTime()}</p>`;
             }
             trainSchedule.innerHTML = tempstring;
         }).catch((error) => {
