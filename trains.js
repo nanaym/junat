@@ -1,3 +1,4 @@
+  
 function cStation() {
     fetch(`https://rata.digitraffic.fi/api/v1/metadata/stations`)
         .then(res => res.json())
@@ -45,10 +46,6 @@ function myFunction() {
                   
                     return hours + "." + minutes
                   }
-<<<<<<< HEAD
-
-=======
->>>>>>> 5b3d15b6070d3d9733f9d3a74fa8f4980d286b26
                 let train;
                 if (d.commuterLineID.length > 0) {
                     train = d.commuterLineID
@@ -75,9 +72,6 @@ function getDepartureTime(timeTableRows, stationShortCode){
     departureStation=timeTableRows.find(tr=>tr.stationShortCode==stationShortCode)
     console.dir(departureStation);
     return departureStation.scheduledTime;
-<<<<<<< HEAD
-}
-=======
 }
 
 setInterval(
@@ -85,6 +79,5 @@ setInterval(
       var dt = new Date();
       document.getElementById("datetime").innerHTML = (("0" + dt.getDate()).slice(-2)) +
         "." + (("0" + (dt.getMonth() + 1)).slice(-2)) + "." + (dt.getFullYear()) + " / " +
-        (("0" + dt.getHours()).slice(-2)) + ":" + (("0" + dt.getMinutes()).slice(-2));
+        (("0" + dt.getHours()).slice(-2)) + ":" + (("0" + dt.getMinutes()).slice(-2)) + ":" + (("0" + dt.getSeconds()).slice(-2));;
     },1000);
->>>>>>> 5b3d15b6070d3d9733f9d3a74fa8f4980d286b26

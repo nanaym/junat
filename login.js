@@ -6,6 +6,7 @@ var newPw = document.getElementById('pw');
 function store() {
     localStorage.setItem(newName.value, newPw.value);
     console.log(newName.value, newPw.value);
+    alert(`Käyttäjätunnus ${newName.value} luotu onnistuneesti. Voit nyt kirjautua sisään.`)
 }
 
 // check if stored data from register-form is equal to entered data in the   login-form
@@ -27,8 +28,15 @@ function check() {
     if (localData == inputData) {
         alert(`Tervetuloa ${userName.value}!`);
         localStorage.setItem('currentUser', userName.value);
+        activeUser()
         // currentUsername.innerHTML = `<p> Sisäänkirjautunut: ${currentUser}</p>`
     } else {
         alert('Väärä käyttäjätunnus tai salasana!');
     }
+}
+function activeUser() {
+    let currentUser = localStorage.getItem('currentUser', userName.value);
+console.log('toimii');
+console.log(currentUser);
+currentUsername.innerHTML = `<p> Sisäänkirjautunut: ${currentUser}</p>`
 }
