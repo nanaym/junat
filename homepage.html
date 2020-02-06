@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-​
 
 <head>
   <meta charset="UTF-8">
@@ -11,11 +10,9 @@
 </head>
 
 <body onload="cStation()">
-  <header class="header">
-    
-  <a id="flag" href="homepageENG.html"><img
-      src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Flag_of_Great_Britain_%281707%E2%80%931800%29.svg"
-      height="20" /></a>
+
+  <a id="flag" href="homepageENG.html"><img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Flag_of_Great_Britain_%281707%E2%80%931800%29.svg" height="20"/></a>
+  <a id="flag" href="homepageSWE.html" onClick="activeUser()"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/4c/Flag_of_Sweden.svg/383px-Flag_of_Sweden.svg.png" height="20"/></a>
 
   <p>Päivämäärä/Aika: <span id="datetime"></span></p>
 
@@ -29,6 +26,8 @@
     <input id="userName" type="text" placeholder="Syötä käyttäjänimi" value="" />
     <input id="userPw" type="password" placeholder="Syötä salasana" value="" />
     <input id="loginbtn" type="submit" value="Kirjaudu" onClick="check()" />
+    <button id="logoutbtn" type="button" onClick="logOut()">Kirjaudu ulos</button>
+    
   </form>
   <div id="currentUsername"></div>
 
@@ -40,13 +39,13 @@
   <h4>Lähtö</h4>
   <input list="chooseStation" type="text" id="searchdepart" placeholder="Syötä asema">
   <datalist id="chooseStation">
-    ​
   </datalist>
 
   <h4>Määränpää</h4>
   <input list="chooseStation" type="text" id="searcharrive" placeholder="Syötä asema">
   <button type="button" id="btndepart" onclick="myFunction()">Hae</button>
-  <br><br>
+
+<br><br>
 
   <div class="trainSchedule" id="tableHeader">
     <p id="a">Train</p>
@@ -56,14 +55,7 @@
     <p id="e">Duration</p>
 </div>
 </header>
-
   <div id="trainSchedule" class="trainSchedule"></div>
-  ​
-  ​
   <script src="trains.js"></script>
-  ​
-  ​
 </body>
-​
-
 </html>

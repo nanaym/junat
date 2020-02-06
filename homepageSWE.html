@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link href="trains.css" rel="stylesheet">
+</head>
+<body onload="cStation()">
+  
+    <a id="flag" href="homepage.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_Finland.svg/383px-Flag_of_Finland.svg.png" height="20"/></a>
+    <a id="flag" href="homepageENG.html"><img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Flag_of_Great_Britain_%281707%E2%80%931800%29.svg" height="20"/></a>
+
+  <p>Datum/Tid: <span id="datetime"></span></p>
+
+  <form id="register-form"> 
+    <input id="username" type="text" placeholder="Välj ett namn" value=""/>
+    <input id="pw" type="password" placeholder="Välj ett lösenord" value=""/>
+    <input id="rgstrbtn" type="submit" value="Skapa ett konto" onClick="store()"/> 
+</form>
+
+<form id="login-form"> 
+    <input id="userName" type="text" placeholder="Ange ditt användarnamn" value=""/>
+    <input id="userPw" type="password" placeholder="Ange ditt lösenord" value=""/>
+    <button id="loginbtn" type="button" onClick="check()">Logga in</button> 
+    <button id="logoutbtn" type="button" onClick="logOut()">Logga ut</button>
+</form>
+<div id="currentUsername"></div>
+
+<a href="https://shop.vr.fi/onlineshop/Welcome.do?request_locale=fi" target="_blank">VR biljetter</a>
+<a href="https://www.hsl.fi/liput" target="_blank">HSL biljetter</a>
+
+
+  <h4>Avgång</h4>
+  <input list="chooseStation" type="text" id="searchdepart" placeholder="Tågstationen">
+  <datalist id="chooseStation">
+
+  </datalist>
+
+  <h4>Destination</h4>
+  <input list="chooseStation" type="text" id="searcharrive" placeholder="Tågstationen">
+  <button type="button" id="btndepart" onclick="myFunction()">Sök</button>
+<br><br>
+
+  <div>
+    <tr>
+      <td>Tåg</td>
+      <td>Spår</td>
+      <td>Avgång</td>
+      <td>Ankomst</td>
+      <td>Resetid</td>
+    </tr>
+  </div>
+
+  <div id="trainSchedule"></div>
+
+  <script src="trains.js"></script>
+  <script src="loginSWE.js" onload="checkIfLogged()"></script>
+
+
+</body>
+
+</html>

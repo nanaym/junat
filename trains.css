@@ -165,6 +165,23 @@
   }
 }
 
+
+p #a {
+    grid-column: 2/3;
+}
+p #b {
+    grid-column: 3/4;
+}
+p #c {
+    grid-column: 4/5;
+}
+p #d {
+    grid-column: 5/6;
+}
+p #e {
+    grid-column: 6/7;
+}
+
 @media only screen and (min-width: 1025px) {
 
     * {
@@ -243,4 +260,3 @@
     }
    
   }
-
