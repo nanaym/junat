@@ -6,7 +6,7 @@ var newPw = document.getElementById('pw');
 function store() {
     localStorage.setItem(newName.value, newPw.value);
     console.log(newName.value, newPw.value);
-    alert(`Käyttäjätunnus ${newName.value} luotu onnistuneesti. Voit nyt kirjautua sisään.`)
+    alert(`Username ${newName.value} succesfully created. You can now log in.`)
 }
 
 // check if stored data from register-form is equal to entered data in the   login-form
@@ -26,25 +26,23 @@ function check() {
 
     // tarkistaa matchaako rekisteröinti ja kirjautuminen
     if (localData == inputData) {
-        alert(`Tervetuloa ${userName.value}!`);
+        alert(`Welcome ${userName.value}!`);
         localStorage.setItem('currentUser', userName.value);
         activeUser()
         // currentUsername.innerHTML = `<p> Sisäänkirjautunut: ${currentUser}</p>`
     } else {
-        alert('Väärä käyttäjätunnus tai salasana!');
+        alert('Wrong username and or password!');
     }
 }
 function activeUser() {
     let currentUser = localStorage.getItem('currentUser', userName.value);
-console.log('toimii');
-console.log(currentUser);
-currentUsername.innerHTML = `<p> Sisäänkirjautunut: ${currentUser}</p>`
+currentUsername.innerHTML = `<p> Logged in: ${currentUser}</p>`
 }
 function logOut(){
     localStorage.removeItem('currentUser');
     document.getElementById("currentUsername").remove();
-    alert('Olet nyt kirjautunut ulos.')
-}
+    alert('Succesfully logged out.')
+};
 function checkIfLogged(){
     let checkIfLog = localStorage.getItem('currentUser', userName.value);
     console.log(checkIfLog)

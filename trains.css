@@ -1,45 +1,179 @@
-* {
-    box-sizing: border-box;
-}
-img {
-    opacity: 1.5;
-    filter: alpha(opacity=100);
+
+
+@media only screen and (max-width: 411px) {
+    * {
+        box-sizing: border-box;
+    }
+
+    h1{
+        font-size: 48px;
+    }
+
+    #flag  {
+        opacity: 1.5;
+        filter: alpha(opacity=100);
+    }
+    
+    #flag:hover {
+        opacity: 0.5;
+        filter: alpha(opacity=40);
+    }
+    
+    body {
+        
+        align-content: center;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        color:hsl(0, 0%, 39%); 
+        margin: 0 auto;
+        background-color: rgba(219, 219, 219, 0.3);
+        text-shadow: rgb(212, 212, 212) 2px 2px 5px;
+    }
+    
+    
+    .trainSchedule {
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template rows: repeat(20,50px);
+       
+        justify-content: center;
+        align-items: stretch;
+        align-content: center;
+        text-align: center;
+    }
+    
+    #tableHeader {
+        font-size: 22px;
+        background-color: rgba(110, 124, 133, 0.788);
+        color:rgb(243, 243, 243);
+        
+    }
+    
+    p{
+        font-size:18px;
+    }
+    
+    p #a {
+        grid-column: 2/3;
+    }
+    p #b {
+        grid-column: 3/4;
+    }
+    p #c {
+        grid-column: 4/5;
+    }
+    p #d {
+        grid-column: 5/6;
+    }
+    p #e {
+        grid-column: 6/7;
+    }
+    
+    #trainDudes {
+        opacity: 0.1;  
+        width: 300%;
+       
+        position:absolute;
+        left:0px;
+        top:0px;
+        z-index:-1;
+    }
+    
+    header {
+        width: 100%;
+        height: auto;
+        position:absolute;
+        left:0px;
+        top:0px;
+        background-image: url("TrainsPhone.jpg");
+       
+        
+    };
 }
 
-img:hover {
-    opacity: 0.5;
-    filter: alpha(opacity=40);
+@media only screen and (min-width: 401px) and (max-width: 1024px) {
+    
+    * {
+        box-sizing: border-box;
+    }
+
+    h1{
+        font-size: 54px;
+    }
+    #flag  {
+        opacity: 1.5;
+        filter: alpha(opacity=100);
+    }
+    
+    #flag:hover {
+        opacity: 0.5;
+        filter: alpha(opacity=40);
+    }
+    
+    body {
+        
+        align-content: center;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        color:hsl(0, 0%, 39%); 
+        margin: 0 auto;
+        background-color: rgba(219, 219, 219, 0.3);
+        text-shadow: rgb(212, 212, 212) 2px 2px 5px;
+    }
+    
+    
+    .trainSchedule {
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template rows: repeat(20,50px);
+       
+        justify-content: center;
+        align-items: stretch;
+        align-content: center;
+        text-align: center;
+    }
+    
+    #tableHeader {
+        font-size: 22px;
+        background-color: rgba(110, 124, 133, 0.788);
+        color:rgb(243, 243, 243);
+        
+    }
+    
+    p{
+        font-size:18px;
+    }
+    
+    p #a {
+        grid-column: 2/3;
+    }
+    p #b {
+        grid-column: 3/4;
+    }
+    p #c {
+        grid-column: 4/5;
+    }
+    p #d {
+        grid-column: 5/6;
+    }
+    p #e {
+        grid-column: 6/7;
+    }
+    
+    header {
+        width: 100%;
+        height: auto;
+        position:absolute;
+        left:0px;
+        top:0px;
+        background-image: url("TrainsPad.jpg");
+  }
 }
 
-body {
-    margin: auto;
-
-    justify-content: center;
-    align-items: stretch;
-    align-content: center;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 22px;
-    color:hsl(0, 0%, 39%); 
-    border: 3px solid rgb(243, 243, 243);
-    padding: 20px 20px 20px 20px;
-    margin: 0 auto;
-    background-color: rgba(107, 173, 218, 0.3);
-}
-
-form {
-    width: 600px;
-}
-
-#trainSchedule {
-    display: grid;
-    grid-gap: 5px;
-    grid-template-columns: repeat(5, 175px);
-    justify-content: center;
-    align-items: stretch;
-    align-content: center;
-    text-align: center;
-}
 
 p #a {
     grid-column: 2/3;
@@ -57,4 +191,84 @@ p #e {
     grid-column: 6/7;
 }
 
+@media only screen and (min-width: 1025px) {
 
+    * {
+        box-sizing: border-box;
+    }
+    #flag  {
+        opacity: 1.5;
+        filter: alpha(opacity=100);
+    }
+    
+    #flag:hover {
+        opacity: 0.5;
+        filter: alpha(opacity=40);
+    }
+    
+    body {
+        
+        align-content: center;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        color:hsl(0, 0%, 39%); 
+        margin: 0 auto;
+        background-color: rgba(219, 219, 219, 0.3);
+        text-shadow: rgb(212, 212, 212) 2px 2px 5px;
+    }
+    
+    
+    .trainSchedule {
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template rows: repeat(20,50px);
+       
+        justify-content: center;
+        align-items: stretch;
+        align-content: center;
+        text-align: center;
+    }
+    
+    #tableHeader {
+        font-size: 22px;
+        background-color: rgba(110, 124, 133, 0.788);
+        color:rgb(243, 243, 243);
+        
+    }
+    
+    p{
+        font-size:18px;
+    }
+    
+    p #a {
+        grid-column: 2/3;
+    }
+    p #b {
+        grid-column: 3/4;
+    }
+    p #c {
+        grid-column: 4/5;
+    }
+    p #d {
+        grid-column: 5/6;
+    }
+    p #e {
+        grid-column: 6/7;
+    }
+    
+    
+    header {
+        width: 100%;
+        height: auto;
+        position:absolute;
+        left:0px;
+        top:0px;
+        background-image: url("TrainsDesktop.jpg");
+    }
+   
+    h1{
+        font-size: 62px;
+    }
+  }
