@@ -10,11 +10,14 @@
 </head>
 
 <body onload="cStation()">
+  <header id="header">
 
   <a id="flag" href="homepageENG.html"><img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Flag_of_Great_Britain_%281707%E2%80%931800%29.svg" height="20"/></a>
   <a id="flag" href="homepageSWE.html" onClick="activeUser()"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/4c/Flag_of_Sweden.svg/383px-Flag_of_Sweden.svg.png" height="20"/></a>
 
-  <p>Päivämäärä/Aika: <span id="datetime"></span></p>
+  <p><span id="datetime"></span></p>
+
+  <h1><strong>Trainify.</strong></h1>
 
   <form id="register-form">
     <input id="username" type="text" placeholder="Valitse nimi" value="" />
@@ -34,7 +37,7 @@
   <a href="https://shop.vr.fi/onlineshop/Welcome.do?request_locale=fi" target="_blank">VR liput</a>
   <a href="https://www.hsl.fi/liput" target="_blank">HSL liput</a>
 
-  <script src="login.js"></script>
+ 
 
   <h4>Lähtö</h4>
   <input list="chooseStation" type="text" id="searchdepart" placeholder="Syötä asema">
@@ -57,5 +60,6 @@
 </header>
   <div id="trainSchedule" class="trainSchedule"></div>
   <script src="trains.js"></script>
+  <script src="login.js" onload="checkIfLogged()"></script>
 </body>
 </html>

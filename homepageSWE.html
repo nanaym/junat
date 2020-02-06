@@ -9,11 +9,14 @@
   <link href="trains.css" rel="stylesheet">
 </head>
 <body onload="cStation()">
+  <header id="header">
   
     <a id="flag" href="homepage.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_Finland.svg/383px-Flag_of_Finland.svg.png" height="20"/></a>
     <a id="flag" href="homepageENG.html"><img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Flag_of_Great_Britain_%281707%E2%80%931800%29.svg" height="20"/></a>
 
-  <p>Datum/Tid: <span id="datetime"></span></p>
+  <p><span id="datetime"></span></p>
+  
+  <h1><strong>Trainify.</strong></h1>
 
   <form id="register-form"> 
     <input id="username" type="text" placeholder="Välj ett namn" value=""/>
@@ -44,15 +47,14 @@
   <button type="button" id="btndepart" onclick="myFunction()">Sök</button>
 <br><br>
 
-  <div>
-    <tr>
-      <td>Tåg</td>
-      <td>Spår</td>
-      <td>Avgång</td>
-      <td>Ankomst</td>
-      <td>Resetid</td>
-    </tr>
-  </div>
+<div class="trainSchedule" id="tableHeader">
+  <p id="a">Tåg</p>
+  <p id="b">Spår</p>
+  <p id="c">Avgång</p>
+  <p id="d">Ankomst</p>
+  <p id="e">Resetid</p>
+</div>
+</header>
 
   <div id="trainSchedule"></div>
 

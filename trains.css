@@ -4,6 +4,11 @@
     * {
         box-sizing: border-box;
     }
+
+    h1{
+        font-size: 48px;
+    }
+
     #flag  {
         opacity: 1.5;
         filter: alpha(opacity=100);
@@ -92,6 +97,10 @@
     
     * {
         box-sizing: border-box;
+    }
+
+    h1{
+        font-size: 54px;
     }
     #flag  {
         opacity: 1.5;
@@ -259,4 +268,7 @@ p #e {
         background-image: url("TrainsDesktop.jpg");
     }
    
+    h1{
+        font-size: 62px;
+    }
   }
