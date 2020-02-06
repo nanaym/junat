@@ -1,6 +1,3 @@
-
-
-
 function cStation() {
     fetch(`https://rata.digitraffic.fi/api/v1/metadata/stations`)
         .then(res => res.json())
@@ -39,6 +36,19 @@ function myFunction() {
                 // let tArrive = new Date(d.timeTableRows[d.timeTableRows.length - 1].scheduledTime);
                 let tArrive = new Date(tArriveTime);
                 let arriveTime = tArrive.toLocaleTimeString("fi", options);
+              
+                // lasketaan matka-aika tarkemmin sekä muutetaan se helpommin ymmärrettävään muotoon
+                function travelTime() {
+                    let timeHelp =  (tArrive - tDepart);
+                    var  minutes = Math.floor((timeHelp / (1000 * 60)) % 60),
+                      hours = Math.floor((timeHelp / (1000 * 60 * 60)) % 24);
+                  
+                    hours = (hours < 10) ? "0" + hours : hours;
+                    minutes = (minutes < 10) ? "0" + minutes : minutes;
+                  
+                    return hours + "." + minutes
+                  }
+
                 let train;
                 if (d.commuterLineID.length > 0) {
                     train = d.commuterLineID
@@ -47,7 +57,7 @@ function myFunction() {
                 };
                 tempstring += `<p id="a">Juna ${train}</p> <p id="b">Raide ${departureStation.commercialTrack}</p> 
                 <p id="c">Lähtö: ${departTime}</p> <p id="d"> Saapuminen: ${arriveTime}</p> 
-                <p id="e"> Matka-aika: ${arriveTime-departTime}</p>`;
+                <p id="e"> Matka-aika: ${travelTime()}</p>`;
             }
             trainSchedule.innerHTML = tempstring;
         }).catch((error) => {
