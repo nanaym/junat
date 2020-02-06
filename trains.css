@@ -1,10 +1,8 @@
 * {
-    box-sizing: borderb;
+    box-sizing: border-box;
 }
 
 body {
-    display: grid;
-    grid-gap: 5px;
     margin: auto;
 
     justify-content: center;
@@ -20,3 +18,32 @@ body {
     background-color: rgba(107, 173, 218, 0.3);
 }
 
+form {
+    width: 600px;
+}
+
+#trainSchedule {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(5, 175px);
+    justify-content: center;
+    align-items: stretch;
+    align-content: center;
+    text-align: center;
+}
+
+p #a {
+    grid-column: 2/3;
+}
+p #b {
+    grid-column: 3/4;
+}
+p #c {
+    grid-column: 4/5;
+}
+p #d {
+    grid-column: 5/6;
+}
+p #e {
+    grid-column: 6/7;
+}
