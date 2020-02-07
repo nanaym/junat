@@ -14,6 +14,7 @@
 
   <a id="flag" href="homepageENG.html"><img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Flag_of_Great_Britain_%281707%E2%80%931800%29.svg" height="20"/></a>
   <a id="flag" href="homepageSWE.html" onClick="activeUser()"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/4c/Flag_of_Sweden.svg/383px-Flag_of_Sweden.svg.png" height="20"/></a>
+  <a id="flag" href="HomepageEST.html"><img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Flag_of_Estonia.svg" height="20"/></a>
 
   <p><span id="datetime"></span></p>
 
@@ -22,14 +23,16 @@
   <form id="register-form">
     <input id="username" type="text" placeholder="Valitse nimi" value="" />
     <input id="pw" type="password" placeholder="Valitse salasana" value="" />
-    <input id="rgstrbtn" type="submit" value="Luo tunnus" onClick="store()" />
+    <input class="button" id="rgstrbtn" type="submit" value="Luo tunnus" onClick="store()" />
+    <button class="button">Tää on vaan Tiili</button>
   </form>
 
   <form id="login-form">
     <input id="userName" type="text" placeholder="Syötä käyttäjänimi" value="" />
     <input id="userPw" type="password" placeholder="Syötä salasana" value="" />
-    <input id="loginbtn" type="submit" value="Kirjaudu" onClick="check()" />
-    <button id="logoutbtn" type="button" onClick="logOut()">Kirjaudu ulos</button>
+    <input class="button" id="loginbtn" type="submit" value="Kirjaudu" onClick="check()" />
+    <button class="button" id="logoutbtn" type="button" onClick="logOut()">Kirjaudu ulos</button>
+    <button class="button">Tämäkin on vaan tiili...</button>
     
   </form>
   <div id="currentUsername"></div>
@@ -46,7 +49,7 @@
 
   <h4>Määränpää</h4>
   <input list="chooseStation" type="text" id="searcharrive" placeholder="Syötä asema">
-  <button type="button" id="btndepart" onclick="myFunction()">Hae</button>
+  <button class="button" type="button" id="btndepart" onclick="myFunction()">Hae</button>
 
 <br><br>
 
@@ -61,5 +64,7 @@
   <div id="trainSchedule" class="trainSchedule"></div>
   <script src="trains.js"></script>
   <script src="login.js" onload="checkIfLogged()"></script>
+  <br>
+  <p><em>Developed by : Nana, Oskari and Henri // Support the local $$$ Mobile Pay +358 40 635 9290 //</em></p>
 </body>
 </html>
