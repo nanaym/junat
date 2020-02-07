@@ -13,6 +13,7 @@
   
     <a id="flag" href="homepage.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_Finland.svg/383px-Flag_of_Finland.svg.png" height="20"/></a>
     <a id="flag" href="homepageENG.html"><img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Flag_of_Great_Britain_%281707%E2%80%931800%29.svg" height="20"/></a>
+    <a id="flag" href="HomepageEST.html"><img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Flag_of_Estonia.svg" height="20"/></a>
 
   <p><span id="datetime"></span></p>
   
@@ -21,7 +22,8 @@
   <form id="register-form"> 
     <input id="username" type="text" placeholder="Välj ett namn" value=""/>
     <input id="pw" type="password" placeholder="Välj ett lösenord" value=""/>
-    <input class="button" id="rgstrbtn" type="submit" value="Skapa ett konto" onClick="store()"/> 
+    <input class="button" id="rgstrbtn" type="submit" value="Skapa ett konto" onClick="store()"/>
+    <button class="button"> Ett Tegel</button>
 </form>
 
 <form id="login-form"> 
@@ -29,6 +31,7 @@
     <input id="userPw" type="password" placeholder="Ange ditt lösenord" value=""/>
     <button class="button" id="loginbtn" type="button" onClick="check()">Logga in</button> 
     <button class="button" id="logoutbtn" type="button" onClick="logOut()">Logga ut</button>
+    <button class="button">Ett Tegel</button>
 </form>
 <div id="currentUsername"></div>
 
@@ -56,12 +59,12 @@
 </div>
 </header>
 
-  <div id="trainSchedule"></div>
+  <div class ="trainSchedule" id="trainSchedule"></div>
 
   <script src="trains.js"></script>
   <script src="loginSWE.js" onload="checkIfLogged()"></script>
-
-  <p><em>Developed by : Nana, Oskari and Henri</em></p>
+  <br>
+  <p><em>Developed by : Nana, Oskari and Henri // Support the local $$$ Mobile Pay +358 40 635 9290 //</em></p>
 </body>
 
 </html>

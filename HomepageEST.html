@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link href="trains.css" rel="stylesheet">
+</head>
+<body onload="cStation()">
+  <header id="header">
+    <a id="flag" href="homepage.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_Finland.svg/383px-Flag_of_Finland.svg.png" height="20"/></a>
+    <a id="flag" href="homepageENG.html"><img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Flag_of_Great_Britain_%281707%E2%80%931800%29.svg" height="20"/></a>
+    <a id="flag" href="homepageSWE.html"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/4c/Flag_of_Sweden.svg/383px-Flag_of_Sweden.svg.png" height="20"/></a>
+
+    <p><span id="datetime"></span></p>
+
+    <h1><strong>Trainify.</strong></h1>
+    
+  <form id="register-form"> 
+    <input id="username" type="text" placeholder="Kasutajanimi" value=""/>
+    <input id="pw" type="password" placeholder="Salasõna" value=""/>
+    <input class="button" id="rgstrbtn" type="submit" value="Registreeri" onClick="store()"/>
+    <button class="button">Lihtsalt Üks Telliskivi</button>
+</form>
+
+<form id="login-form"> 
+    <input id="userName" type="text" placeholder="Kasutajanimi" value=""/>
+    <input id="userPw" type="password" placeholder="Salasõna" value=""/>
+    <button class="button" id="loginbtn" type="button" onClick="check()">Sisene</button>
+    <button class="button" id="logoutbtn" type="button" onClick="logOut()">Välju</button>
+    <button class="button">Teine Telliskivi</button>
+    
+
+</form>
+
+<div id="currentUsername"></div>
+
+<a href="https://shop.vr.fi/onlineshop/Welcome.do?request_locale=en" target="_blank">VR piletid</a>
+<a href="https://www.hsl.fi/en/tickets" target="_blank">HSL piletid</a>
+
+<script src="LoginEST.js"></script>
+
+
+  <h4>Lähtepeatus</h4>
+  <input list="chooseStation" type="text" id="searchdepart" placeholder="Lähtekoht">
+  <datalist id="chooseStation">
+
+  </datalist>
+
+  <h4>Sihtpeatus</h4>
+  <input list="chooseStation" type="text" id="searcharrive" placeholder="Saabumiskoht">
+  <button class="button" type="button" id="btndepart" onclick="myFunction()">Otsi</button>
+  <br><br>
+
+  <div class="trainSchedule" id="tableHeader">
+      <p id="a">Rong</p>
+      <p id="b">Rada</p>
+      <p id="c">Väljumine</p>
+      <p id="d">Saabumine</p>
+      <p id="e">Reisi Aeg</p>
+  </div>
+</header>
+
+  <div class="trainSchedule" id="trainSchedule">
+  </div>
+
+
+  <script src="trains.js"></script>
+  <script src="LoginEST.js" onload="checkIfLogged()"></script>
+  <br>
+  <p><em>Developed by : Nana, Oskari and Henri // Support the local $$$ Mobile Pay +358 40 635 9290 //</em></p>
+
+</body>
+
+</html>
